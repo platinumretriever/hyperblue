@@ -48,14 +48,27 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%FEDORA_VERSION%/solopasha-hyprland-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
   install:
-    - nemo
+    - sddm
+    - kitty
+    - fish
     - btop
+    - xdg-desktop-portal-hyprland
+    - xdg-desktop-portal
+    - polkit-gnome
+    - nemo
+    - pipewire
+    - wireplumber
+    - pipewire-alsa
+    - pipewire-jack-audio-connection-kit
+    - pipewire-pulseaudio
+    - rofi-wayland
     # Needed for yafti (the first boot installer). Remove if you're not using yafti.
     - python3-pip
     # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
@@ -71,8 +84,7 @@ rpm:
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - firefox
-    - firefox-langpacks
+    -htop
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
