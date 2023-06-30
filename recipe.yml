@@ -60,6 +60,7 @@ rpm:
     - kitty
     - fish
     - btop
+    - hyprland
     - xdg-desktop-portal-hyprland
     - xdg-desktop-portal
     - polkit-gnome
