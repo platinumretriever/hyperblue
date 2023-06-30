@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: hyprblue
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -49,6 +49,7 @@ rpm:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%FEDORA_VERSION%/solopasha-hyprland-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -63,12 +64,21 @@ rpm:
     - xdg-desktop-portal
     - polkit-gnome
     - nemo
+    - nemo-fileroller
     - pipewire
     - wireplumber
     - pipewire-alsa
     - pipewire-jack-audio-connection-kit
     - pipewire-pulseaudio
     - rofi-wayland
+    - gnome-keyring
+    - qt6ct
+    - dunst
+    - kvantum
+    - qt6ct
+    - exa
+    - nwg-look
+
     # Needed for yafti (the first boot installer). Remove if you're not using yafti.
     - python3-pip
     # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
@@ -103,3 +113,7 @@ firstboot:
   flatpaks:
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
+    - com.github.iwalton3.jellyfin-media-player
+    - com.spotify.Client
+    - com.github.tchx84.Flatseal
+    - org.gnome.eog
