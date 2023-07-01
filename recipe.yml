@@ -65,6 +65,7 @@ rpm:
     - xdg-desktop-portal
     - plymouth
     - plymouth-plugin-script
+    - plymouth-theme-solar
     - polkit-gnome
     - nemo
     - nemo-fileroller
