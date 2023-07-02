@@ -56,7 +56,7 @@ rpm:
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
   install:
-    - sddm
+    - gdm
     - kitty
     - fish
     - btop
@@ -92,7 +92,7 @@ rpm:
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    -htop
+    - htop
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
