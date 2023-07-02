@@ -94,7 +94,6 @@ rpm:
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - htop
-    - xdg-desktop-portal-gtk
     - xdg-desktop-portal-gnome
 
 # Configuration for the "first boot" experience, which is available after login.
